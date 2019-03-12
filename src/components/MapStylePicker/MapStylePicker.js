@@ -6,7 +6,7 @@ export default ({ currentStyle, onStyleChange }) => {
     <select
       value={currentStyle}
       className="map-style-picker"
-      onChange={e => onStyleChange(e.target.value)}
+      onChange={({ target: { value } }) => onStyleChange(value)}
       style={{
         position: "absolute",
         top: "20px",
